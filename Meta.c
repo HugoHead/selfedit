@@ -3,7 +3,7 @@
 
 // Function that will be modified
 int some_function() {
-    return 0; // This is the part that will be modified
+    return 1; // This is the part that will be modified
 }
 
 // Check the function result
