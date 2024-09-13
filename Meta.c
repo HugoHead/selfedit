@@ -20,7 +20,7 @@ int test_code() {
 
 // Modify the source code and recompile
 void modify_self() {
-    FILE *fp = fopen("self_modifying_program.c", "r+");
+    FILE *fp = fopen("Meta.c", "r+");
     if (fp == NULL) {
         printf("Error: Couldn't open file for modification.\n");
         exit(1);
@@ -47,10 +47,10 @@ void modify_self() {
 
     // Recompile the program after modifying
     printf("Recompiling...\n");
-    system("gcc -o self_modifying_program self_modifying_program.c");
+    system("gcc -o meta Meta.c");
 
-    printf("Restarting the modified program...\n");
-    system("./self_modifying_program");  // Run the modified version
+    //printf("Restarting the modified program...\n");
+    //system("./meta");  // Run the modified version
 }
 
 int main() {
