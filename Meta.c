@@ -59,7 +59,7 @@ int main() {
 
     if (exit_code == 0) {
         printf("No modification needed, terminating.\n");
-        return 0;
+        return 1;
     }
 
     // If the test fails, modify the code
