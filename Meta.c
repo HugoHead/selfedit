@@ -4,6 +4,7 @@
 // Function that will be modified
 int some_function() {
     return 1; // This is the part that will be        return 1;
+  }
 // Check the function result
 int test_code() {
     int result = some_function();
