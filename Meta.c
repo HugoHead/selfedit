@@ -3,9 +3,9 @@
 
 // Function that will be modified
 int some_function() {
-    return 1; 
+    return 1;
 }
-// Check the function result
+//Check the function result
 int test_code() {
     int result = some_function();
     if (result == 0) {
@@ -32,12 +32,12 @@ void modify_self() {
         if (strstr(line, "return 0;")) {
             pos = ftell(fp);  // Get the current position in the file
             fseek(fp, pos - strlen("return 0;\n"), SEEK_SET);  // Move the file pointer to the 'return 0;'
-            fputs("    return 1;\n", fp);  // Replace with 'return 1;'
+            fputs("return 1;\n", fp);  // Replace with 'return 1;'
             break;
         } else if (strstr(line, "return 1;")) {
             pos = ftell(fp);
             fseek(fp, pos - strlen("return 1;\n"), SEEK_SET);
-            fputs("    return 0;\n", fp);  // Replace with 'return 0;'
+            fputs("return 0;\n", fp);  // Replace with 'return 0;'
             break;
         }
     }
